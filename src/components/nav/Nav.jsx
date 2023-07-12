@@ -7,7 +7,6 @@ import {
   createStyles,
   useMantineTheme
 } from '@mantine/core'
-/* import Autoplay from 'embla-carousel-react'; */
 import { Carousel } from '@mantine/carousel';
 import { MdFacebook } from 'react-icons/md';
 import { AiFillInstagram , AiOutlineTwitter , AiFillYoutube } from 'react-icons/ai';
