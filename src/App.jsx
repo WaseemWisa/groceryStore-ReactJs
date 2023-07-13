@@ -1,4 +1,4 @@
-import { Global, MantineProvider } from '@mantine/core';
+import { Container, Global, MantineProvider } from '@mantine/core';
 import { Routes , Route} from 'react-router-dom';
 import MainLayout from './components/mainLayout/MainLayout';
 import Home from './pages/Home/index'
@@ -44,6 +44,7 @@ function App() {
         }}
       >
         <MyGlobalStyles/>
+
       <Routes>
         <Route element={<MainLayout/>}>
           <Route index path='/' element={<Home/>} />

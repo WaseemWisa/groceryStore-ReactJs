@@ -1,4 +1,4 @@
-import { Title , createStyles, useMantineTheme} from '@mantine/core';
+import { Container, Title , createStyles, useMantineTheme} from '@mantine/core';
 
 
 
@@ -6,7 +6,9 @@ import { Title , createStyles, useMantineTheme} from '@mantine/core';
 function Home() {
 
   return (
-    <Title order={1}>Home</Title>
+    <header>
+
+    </header>
   )
 }
 

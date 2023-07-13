@@ -9,8 +9,10 @@ import {
 } from '@mantine/core'
 import { Carousel } from '@mantine/carousel';
 import { MdFacebook } from 'react-icons/md';
+import { BsArrowRightShort , BsArrowLeftShort } from 'react-icons/bs';
 import { AiFillInstagram , AiOutlineTwitter , AiFillYoutube } from 'react-icons/ai';
 import { BiLogoPinterest} from 'react-icons/bi';
+import './style.css'
 
 const useStyles = createStyles((theme) => ({
   container:{
@@ -42,8 +44,10 @@ const useStyles = createStyles((theme) => ({
     flex: 1,
     textAlign: 'end',
     transition: '0.3s',
+    color: theme.colors.colorBodyBg,
     '&:hover': {
-      color: theme.colors.colorPrimary
+      color: theme.colors.colorPrimary,
+      textDecoration: 'underline'
     },
     [`@media (max-width: ${theme.breakpoints.xs})`]: {
       display: 'none'
@@ -54,9 +58,12 @@ const useStyles = createStyles((theme) => ({
   },
   slide:{
     textAlign: 'center',
+    color: theme.colors.colorBodyBg,
   },
-
 }))
+
+
+
 function Nav() {
   const theme = useMantineTheme()
   const { classes } = useStyles(theme);
@@ -77,7 +84,7 @@ function Nav() {
           height={'100%'}
           align="start"
           className={classes.carousel}
-          withControls={false}
+          loop
         >
           <Carousel.Slide className={classes.slide}>Slide 1</Carousel.Slide>
           <Carousel.Slide className={classes.slide}>Slide 2</Carousel.Slide>
