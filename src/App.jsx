@@ -43,8 +43,7 @@ function App() {
           }
         }}
       >
-        <MyGlobalStyles/>
-
+      <MyGlobalStyles/>
       <Routes>
         <Route element={<MainLayout/>}>
           <Route index path='/' element={<Home/>} />
