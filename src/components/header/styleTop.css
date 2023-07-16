@@ -1,4 +1,18 @@
-.mantine-Input-input {
+/* .mantine-Input-input {
   width: 300px;
   max-width: 100%;
 }
+.mantine-List-itemWrapper span{
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.mantine-Indicator-root {
+  display: flex;
+  align-items: center;
+  
+}
+.mantine-Text-root  {
+  font-size: 1rem;
+  font-weight: 400;
+} */
