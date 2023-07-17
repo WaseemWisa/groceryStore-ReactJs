@@ -32,24 +32,22 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    paddingBottom: '10px'
   },
   list:{
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'flex-end',
     flexDirection: 'row',
     gap: '1rem',
-    
   },
   listItem:{
-
     cursor: 'pointer',
     marginRight: '0.6rem',
 
     ['& span:first-of-type']: {
       display: 'flex',
       alignItems: 'center',
-/*       fontSize: '1.3rem',
-      fontWeight: '500', */
     },
   },
   inputSearch: {
@@ -75,6 +73,11 @@ const useStyles = createStyles((theme) => ({
   },
   indicator: {
     userSelect: 'none',
+  },
+  text: {
+    [`@media (max-width: ${theme.breakpoints.xs})`]: {
+      display: 'none !important'
+    },
   }
 }))
 
@@ -86,32 +89,27 @@ function HeaderTop() {
   return (
     <Fragment>
       <Box component='div' className={classes.headerTop}>
-        <Link to={'/'}>
+        <Link to={'/'} className={classes.logo}>
           <Image maw={'70px'} src={Logo} alt="Logo image" />
         </Link>
-
-        <Input  placeholder="Search" rightSection={<SearchOutlinedIcon/>} radius="xs" className={classes.inputSearch}/>
-        
+        <Input  placeholder="Search" rightSection={<SearchOutlinedIcon/>} radius="xs" className={classes.inputSearch}/>        
         <List className={classes.list}>
           <List.Item className={classes.listItem}>
             <Text component='span'><PermIdentityOutlinedIcon className={classes.icon}/></Text>
-            <Text component='span'>Account</Text>
+            <Text component='span' className={classes.text}>Account</Text>
           </List.Item>
-
           <List.Item className={classes.listItem}>
-            <Indicator inline size={14} offset={7}  color="red" withBorder>
+            <Indicator inline size={14} offset={7}  color={theme.colors.colorPrimary} withBorder>
               <FavoriteBorderOutlinedIcon className={classes.icon}/>
             </Indicator>
-            <Text component='span'>Account</Text>
+            <Text component='span' className={classes.text}>Account</Text>
           </List.Item>
-
           <List.Item className={classes.listItem}>
-            <Indicator inline size={14} offset={7}  color="green" withBorder>
+            <Indicator inline size={14} offset={7}  color={theme.colors.colorPrimary} withBorder>
               <ShoppingBagOutlinedIcon  className={classes.icon}/>
             </Indicator>
-            <Text component='span'>Cart</Text>
+            <Text component='span' className={classes.text}>Cart</Text>
           </List.Item>
-
           <List.Item className={cx(classes.listItem, classes.mobIcon)} onClick={open}>
             <MenuOutlinedIcon/>
           </List.Item>

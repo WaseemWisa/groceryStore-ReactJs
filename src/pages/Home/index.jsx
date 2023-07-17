@@ -1,4 +1,6 @@
 import { Container, Title , createStyles, useMantineTheme} from '@mantine/core';
+import Hero from './components/Hero';
+import { Fragment } from 'react';
 
 
 
@@ -6,9 +8,9 @@ import { Container, Title , createStyles, useMantineTheme} from '@mantine/core';
 function Home() {
 
   return (
-    <header>
-
-    </header>
+    <Fragment>
+      <Hero/>
+    </Fragment>
   )
 }
 
