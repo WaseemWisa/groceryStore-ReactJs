@@ -8,13 +8,19 @@ import {
   createStyles,
   useMantineTheme
 } from '@mantine/core';
-import cover from '../../../../public/imgs/cover-1.jpg'
+import cover from '../../../../public/imgs/cover-1.jpg';
+import './style.css'
 const useStyles = createStyles((theme) => ({
   carousel: {
     position: 'relative',
-
+  },
+  '.mantine-Carousel-indicators': {
+    [`@media (min-width: ${theme.breakpoints.xs})`]: {
+      display: 'none !imporant',
+    },
   },
   carouselHolder: {
+    userSelect: 'none',
     '.mantine-Carousel-control': {
       backgroundColor: theme.colors.colorThird,
       borderRadius: '3px',
@@ -22,11 +28,6 @@ const useStyles = createStyles((theme) => ({
       height: '35px',
       [`@media (max-width: ${theme.breakpoints.xs})`]: {
         display: 'none'
-      },
-      ['.mantine-Carousel-indicators']: {
-        [`@media (min-width: ${theme.breakpoints.xs})`]: {
-          display: 'none !imporant'
-        },
       },
       ['.mantine-Carousel-indicator']: {
         backgroundColor: 'red'
@@ -62,7 +63,7 @@ function Hero() {
   const { classes , cx } = useStyles(theme);
 
   return (
-    <Carousel maw={'100%'} mx="auto" height={'600px'} withIndicators  dragFree={false} className={classes.carouselHolder}>
+    <Carousel maw={'100%'} mx="auto" height={'600px'} withIndicators loop dragFree={false} className={cx(classes.carouselHolder , 'hero-carousel')}>
       <Carousel.Slide className={classes.carousel}>
         <BackgroundImage src={cover} sx={{height: '100%'}}>
         <Box component='div' className={classes.textDiv}>

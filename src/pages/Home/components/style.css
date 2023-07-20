@@ -1,0 +1,10 @@
+
+@media (min-width: 481px) {
+  .hero-carousel .mantine-Carousel-indicators {
+    display: none !important
+  }
+
+}
+.hero-carousel .mantine-Carousel-indicator[data-active="true"] {
+  background-color: orange;
+}
