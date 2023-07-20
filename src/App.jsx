@@ -29,7 +29,7 @@ function App() {
         withNormalizeCSS
         theme={{
           breakpoints: {
-            xs: '480px',
+            xs: '30em',
             sm: '48em',
             md: '64em',
             lg: '74em',

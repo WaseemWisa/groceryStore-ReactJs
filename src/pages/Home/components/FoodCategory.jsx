@@ -39,15 +39,13 @@ function FoodCategory() {
   const [data, setData] = useState(Data)
   const breakpointsizes = [
     { maxWidth: "md", slideSize: "50%"},
-    { maxWidth: "lg", slideSize: "50%"},
-    { maxWidth: "sm", slideSize: "100%"},
   ]
   return (
     <div>
       <Container size={'lg'} sx={{padding: '2rem 0'}} className={classes.carouselHolder}>
         <Heading title={"ORGANIC FOOD"} desc={'Food category'}/>
         <Carousel slideSize="16.666%" 
-          /* breakpoints={breakpointsizes}  */
+          breakpoints={breakpointsizes}
           height={'200px'} 
           withControls={true}
           loop
