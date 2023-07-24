@@ -27,7 +27,7 @@ const useStyles = createStyles((theme) => ({
   },
   desc: {
     fontSize: '2.125rem',
-    fontWeight: '600',
+    fontWeight: '700',
     color: '#000',
     lineHeight: '1',
   }
