@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import { Fragment } from 'react';
 import FoodCategory from './components/FoodCategory';
 import FeaturedProduct from './components/featuredProduct/FeaturedProduct';
+import OurService from './components/ourService/OurService';
 
 
 
@@ -14,6 +15,7 @@ function Home() {
       <Hero/>
       <FoodCategory/>
       <FeaturedProduct/>
+      <OurService/>
     </Fragment>
   )
 }
